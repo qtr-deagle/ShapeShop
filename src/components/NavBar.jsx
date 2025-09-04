@@ -6,10 +6,17 @@ const NavBar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="bg-gradient-to-r from-[#2a0845] to-[#6441a5] text-white p-4 px-6 py-4 flex justify-between items-center">
-            <a to='/' className="text-4xl animate-pulse">🔮</a>
-            <div className="text-xl font-bold tracking-wide ml-3">
-                ShapeShop
+        <nav className="bg-gradient-to-r from-[#27232b] via-[#372a44] to-[#6441a5] text-white flex-wrap px-6 py-2 flex justify-between items-center border-b-4 border-purple-500 shadow-[0_0_20px_rgba(128,0,255,0.6)]">
+            <div className="flex items-center space-x-4">
+                <a href='/' className="text-4xl animate-pulse ml-4">🔮</a>
+                <div>
+                    <a href='/' className="shadow-text text-2xl font-bold ml-3 hover:text-purple-300 transition-colors duration-300 font-mono text-white shadow-text">
+                        SHAPESHOP
+                    </a>
+                    <p className="ml-3 text-xs font-mono text-purple-200">
+                        Cosmic Geometry Emporium
+                    </p>
+                </div>
             </div>
 
             <div className="md:hidden">
@@ -18,17 +25,19 @@ const NavBar = () => {
                 </button>
             </div>
 
-            <ul className={`md:flex md:space-x-6 ${open ? 'block' : 'hidden'} absolute md:static top-16 left-0 w-full bg-slate-800 md:bg-transparent px-6 py-4 md:p-0`}>
-                <li><a href="#discover" className="block py-2 hover:text-teal-300">Discover</a></li>
-                <li><a href="#shop" className="block py-2 hover:text-teal-300">Shop</a></li>
-                <li><a href="#news" className="block py-2 hover:text-teal-300">News</a></li>
-                <li><a href="#about" className="block py-2 hover:text-teal-300">About</a></li>
-            </ul>
+            <div className="flex items-center gap-4 ml-auto mt-4 md:mt-0">
+                <div className="h-1 py-4 tracking-wide inline-flex items-center justify-center bg-[#1a002e] p-4 border-2 border-purple-500 shadow-[0_0_15px_rgba(147,51,234,0.5)] w-fit mx-auto">
+                    <GiCrystalGrowth className="text-blue-300 text-sm mr-2" />
+                    <span className="flex text-purple-300 font-bold text-xs tracking-wide">
+                        CRYSTALS: <span className="text-purple-400 ml-2">0</span>
+                    </span>
+                </div>
 
-            <button className="text-xl tracking-wide inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-9 px-4 py-2 has-[>svg]:px-3 bg-purple-600 hover:bg-purple-800 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] font-bold font-mono transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 text-white">
-                <GiCrystalGrowth />
-                BUY CRYSTALS
-            </button>
+                <button href='/' className="text-xs tracking-wide inline-flex items-center gap-2 rounded-md h-9 px-4 bg-purple-600 hover:bg-purple-800 border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] font-bold font-mono transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1">
+                    <GiCrystalGrowth className='text-sm' />
+                    BUY CRYSTALS
+                </button>
+            </div>
         </nav>
     );
 };

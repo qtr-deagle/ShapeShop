@@ -22,3 +22,9 @@ ul li a {
 ul li a:hover {
   background-color: #111111;
 }
+
+.bg-blurry {
+  background: radial-gradient(circle at center, #6a0dad, #2a0845);
+  filter: blur(2px);
+  opacity: 0.9;
+}
