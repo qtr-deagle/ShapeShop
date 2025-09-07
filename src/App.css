@@ -1,3 +1,34 @@
+.card {
+  width: 300px;              /* Adjust width as needed */
+  height: 180px;             /* Adjust height for content */
+  padding: 1rem;             /* Adds inner spacing */
+  transition: all 0.2s;
+  border: 4px solid #000;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+  background-color: #1a002e; /* Optional: dark theme match */
+  border-radius: 0.5rem;     /* Optional: rounded corners */
+  display: flex;             /* Optional: layout control */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);
+}
+
+.card-button {
+  transition: all 0.2s;
+  border: 4px solid #000;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+}
+
+.card-button:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);
+}
+
 ul {
   list-style-type: none;
   margin: 0;

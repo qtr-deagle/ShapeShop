@@ -6,7 +6,7 @@ const NavBar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="bg-gradient-to-r from-[#27232b] via-[#372a44] to-[#6441a5] text-white flex-wrap md: px-6 py-2 flex justify-between items-center border-b-4 border-purple-500 shadow-[0_0_20px_rgba(128,0,255,0.6)]">
+        <nav className="bg-gradient-to-r from-[#27232b] via-[#372a44] to-[#6441a5] text-white px-4 py-2 flex flex-wrap items-center justify-between border-b-4 border-purple-500 shadow-[0_0_20px_rgba(128,0,255,0.6)]">
             <div className="flex items-center space-x-4">
                 <a href='/' className="text-4xl animate-pulse ml-4">🔮</a>
                 <div>
@@ -26,15 +26,15 @@ const NavBar = () => {
             </div>
 
             <div className="flex items-center gap-4">
-                <div className="h-1 py-4 tracking-wide inline-flex items-center justify-center bg-[#1a002e] p-4 border-2 border-purple-500 shadow-[0_0_15px_rgba(147,51,234,0.5)] w-fit mx-auto">
+                <div className="h-1 mt-1 py-4 tracking-wide inline-flex items-center justify-center bg-[#1a002e] p-4 border-2 border-purple-500 shadow-[0_0_15px_rgba(147,51,234,0.5)] w-fit mx-auto">
                     <GiCrystalGrowth className="text-blue-300 text-sm mr-2" />
                     <span className="flex text-purple-300 font-bold text-xs tracking-wide">
                         CRYSTALS: <span className="text-purple-400 ml-2">0</span>
                     </span>
                 </div>
 
-                <button href='/' className="text-xs tracking-wide inline-flex items-center gap-2 rounded-md h-9 px-4 bg-purple-600 hover:bg-purple-800 border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] font-bold font-mono transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1">
-                    <GiCrystalGrowth className='text-sm' />
+                <button className="card-button text-xs tracking-wide inline-flex items-center gap-2 rounded-md h-9 px-4 bg-purple-600 hover:bg-purple-800 font-bold font-mono">
+                    <GiCrystalGrowth className="text-sm" />
                     BUY CRYSTALS
                 </button>
             </div>
