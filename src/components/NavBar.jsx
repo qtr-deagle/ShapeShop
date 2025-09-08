@@ -33,7 +33,7 @@ const NavBar = () => {
                     </span>
                 </div>
 
-                <button className="card-button text-xs tracking-wide inline-flex items-center gap-2 rounded-md h-9 px-4 bg-purple-600 hover:bg-purple-800 font-bold font-mono">
+                <button className="card-button text-xs tracking-wide inline-flex items-center gap-2 h-9 px-4 bg-purple-600 hover:bg-purple-800 font-bold font-mono">
                     <GiCrystalGrowth className="text-sm" />
                     BUY CRYSTALS
                 </button>
