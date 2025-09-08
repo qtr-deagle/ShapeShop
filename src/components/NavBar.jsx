@@ -26,7 +26,7 @@ const NavBar = () => {
             </div>
 
             <div className="flex items-center gap-4">
-                <div className="h-1 mt-1 py-4 tracking-wide inline-flex items-center justify-center bg-[#1a002e] p-4 border-2 border-purple-500 shadow-[0_0_15px_rgba(147,51,234,0.5)] w-fit mx-auto">
+                <div className="h-1 mt-1 py-4 tracking-w    ide inline-flex items-center justify-center bg-[#1a002e] p-4 border-2 border-purple-500 shadow-[0_0_15px_rgba(147,51,234,0.5)] w-fit mx-auto">
                     <GiCrystalGrowth className="text-blue-300 text-sm mr-2" />
                     <span className="flex text-purple-300 font-bold text-xs tracking-wide">
                         CRYSTALS: <span className="text-purple-400 ml-2">0</span>
