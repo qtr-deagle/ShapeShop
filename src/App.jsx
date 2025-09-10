@@ -1,14 +1,15 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
-import Card from './components/card';
+import ShapeListing from './components/shapeListing';
+import ShapeListings from './components/shapeListings';
 
 const App = () => {
   return (
     <>
       <NavBar />
       <Hero />
-      <Card />
+      <ShapeListings />
     </>
   );
 };
