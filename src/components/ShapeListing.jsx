@@ -2,8 +2,8 @@ import { GiCrystalGrowth } from "react-icons/gi";
 import { FiBox } from "react-icons/fi";
 import { LuPyramid } from "react-icons/lu";
 import { PiSphereBold } from "react-icons/pi";
-import { TbHexagonalPrism } from "react-icons/tb";
 import { RxBoxModel } from "react-icons/rx";
+import { TbHexagonalPrism } from "react-icons/tb";
 import { HiOutlineCircleStack } from "react-icons/hi2";
 
 const rarityColors = {
@@ -19,8 +19,8 @@ const shapeIcons = {
     "Plasma Cube": <FiBox className="text-7xl rotating" />,
     "Neon Pyramid": <LuPyramid className="text-7xl rotating" />,
     "Sphere of Light": <PiSphereBold className="text-7xl rotating" />,
-    "Hexagonal Prism": <TbHexagonalPrism className="text-7xl rotating" />,
-    "Dark Square": <RxBoxModel className="text-7xl rotating" />,
+    "Hexagonal Prism": <RxBoxModel className="text-7xl rotating" />,
+    "Dark Square": <TbHexagonalPrism className="text-7xl rotating" />,
     "Stack Circle": <HiOutlineCircleStack className="text-7xl rotating" />
 };
 
@@ -29,7 +29,7 @@ const ShapeListing = ({ shape }) => {
         <div className="card text-xs tracking-wide inline-flex items-center gap-2 rounded-md h-9 px-6 bg-purple-600 hover:bg-purple-900 font-bold font-mono">
             <div className="relative w-full h-[120px] bg-gradient-to-b from-[#3f1a5e] via-[#a855f7]/60 to-[#3f1a5e] border-purple-300 border-2 text-white flex justify-center mb-32 items-center">
                 {shapeIcons[shape.name]}
-                <div className={`absolute rounded-lg px-1 h-5 top-2 right-2 border-2 text-white font-mono ${rarityColors[shape.rarity]}`}>
+                <div className={`absolute rounded-lg px-1 h-5 top-2 right-2 border-2 font-mono ${rarityColors[shape.rarity]}`}>
                     <span className="text-xs px-1">{shape.rarity}</span>
                 </div>
             </div>

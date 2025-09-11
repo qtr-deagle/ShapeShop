@@ -1,45 +1,83 @@
 import { useState } from 'react';
-import { FiMenu } from 'react-icons/fi';
 import { GiCrystalGrowth } from "react-icons/gi";
+import { RxCross2 } from "react-icons/rx";
 
-const NavBar = () => {
-    const [open, setOpen] = useState(false);
+function NavBar() {
+  const [showPopup, setShowPopup] = useState(false);
 
-    return (
-        <nav className="bg-gradient-to-r from-[#27232b] via-[#372a44] to-[#6441a5] text-white px-4 py-2 flex flex-wrap items-center justify-between border-b-4 border-purple-500 shadow-[0_0_20px_rgba(128,0,255,0.6)]">
-            <div className="flex items-center space-x-4">
-                <a href='/' className="text-4xl animate-pulse ml-4">🔮</a>
-                <div>
-                    <a href='/' className="hidden md:block shadow-text text-2xl font-bold ml-3 hover:text-purple-300 transition-colors duration-300 font-mono text-white shadow-text">
-                        SHAPESHOP
-                    </a>
-                    <p className="ml-3 text-xs font-mono text-purple-200 hidden md:block ">
-                        Cosmic Geometry Emporium
-                    </p>
-                </div>
+  const handleClick = () => {
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
+  const boxStyles = [
+    "bg-gradient-to-br from-purple-200 to-purple-400 border-purple-500",
+    "bg-gradient-to-tr from-indigo-100 to-purple-300 border-indigo-400",
+    "bg-gradient-to-bl from-pink-100 to-purple-200 border-pink-400",
+    "bg-gradient-to-r from-violet-100 to-purple-300 border-violet-400",
+    "bg-gradient-to-tl from-fuchsia-100 to-purple-300 border-fuchsia-400",
+    "bg-gradient-to-b from-purple-100 to-purple-500 border-purple-600",
+  ];
+
+
+  return (
+    <nav className="bg-gradient-to-r from-[#27232b] via-[#372a44] to-[#6441a5] text-white px-4 py-2 flex flex-wrap items-center justify-between border-b-4 border-purple-500 shadow-[0_0_20px_rgba(128,0,255,0.6)]">
+      <div className="flex items-center space-x-4">
+        <a href='/' className="text-4xl animate-pulse ml-4">🔮</a>
+        <div>
+          <a href='/' className="hidden md:block shadow-text text-2xl font-bold ml-3 hover:text-purple-300 transition-colors duration-300 font-mono text-white shadow-text">
+            SHAPESHOP
+          </a>
+          <p className="ml-3 text-xs font-mono text-purple-200 hidden md:block ">
+            Cosmic Geometry Emporium
+          </p>
+        </div>
+      </div>
+      <div className="flex items-center gap-4">
+        <div className="h-1 mt-1 py-4 inline-flex items-center justify-center bg-[#1a002e] p-4 border-2 border-purple-500 shadow-[0_0_15px_rgba(147,51,234,0.5)] w-fit mx-auto">
+          <GiCrystalGrowth className="text-blue-300 text-sm mr-2" />
+          <span className="flex text-purple-300 font-bold text-xs tracking-wide">
+            CRYSTALS: <span className="text-purple-400 ml-2">0</span>
+          </span>
+        </div>
+
+        <button onClick={handleClick} className="card-button text-xs tracking-wide inline-flex items-center gap-2 h-9 px-4 bg-purple-600 hover:bg-purple-800 font-bold font-mono">
+          <GiCrystalGrowth className="text-sm" />
+          BUY CRYSTALS
+        </button>
+        {showPopup && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div className="bg-white text-black p-8 rounded-xl shadow-2xl w-[900px] max-w-full h-[600px] relative">
+              <button onClick={closePopup} className="absolute top-4 right-4 text-2xl font-bold text-purple-600 hover:text-purple-800">
+                <RxCross2 />
+              </button>
+
+              <h2 className="text-4xl font-extrabold font-mono text-center">SELECT</h2>
+              <p className="mb-3 text-sm text-gray-700 text-center">choose your crystal and bend the cosmos to your will.</p>
+
+              <div className="grid grid-cols-3 gap-4">
+                {[...Array(6)].map((_, i) => (
+                  <div
+                    key={i}
+                    className={`rounded-xl p-16 flex flex-col items-center justify-center hover:scale-105 transition transform duration-300 border ${boxStyles[i]}`}
+                  >
+                    <GiCrystalGrowth className="text-purple-600 text-3xl mb-2" />
+                    <span className="font-bold text-sm font-mono">Crystal #{i + 1}</span>
+                    <button className="mt-2 text-xs bg-purple-600 hover:bg-purple-800 text-white px-3 py-1 rounded font-mono">
+                      Buy
+                    </button>
+                  </div>
+                ))}
+              </div>
             </div>
-
-            <div className="md:hidden">
-                <button onClick={() => setOpen(!open)}>
-
-                </button>
-            </div>
-
-            <div className="flex items-center gap-4">
-                <div className="h-1 mt-1 py-4 inline-flex items-center justify-center bg-[#1a002e] p-4 border-2 border-purple-500 shadow-[0_0_15px_rgba(147,51,234,0.5)] w-fit mx-auto">
-                    <GiCrystalGrowth className="text-blue-300 text-sm mr-2" />
-                    <span className="flex text-purple-300 font-bold text-xs tracking-wide">
-                        CRYSTALS: <span className="text-purple-400 ml-2">0</span>
-                    </span>
-                </div>
-
-                <button className="card-button text-xs tracking-wide inline-flex items-center gap-2 h-9 px-4 bg-purple-600 hover:bg-purple-800 font-bold font-mono">
-                    <GiCrystalGrowth className="text-sm" />
-                    BUY CRYSTALS
-                </button>
-            </div>
-        </nav>
-    );
+          </div>
+        )}
+      </div>
+    </nav>
+  );
 };
 
 export default NavBar;

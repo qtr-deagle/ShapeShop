@@ -36,5 +36,43 @@
             "price": "1500",
             "rarity": "DIVINE"
         }
+    ],
+    "crystals": [
+        {
+            "id": 1,
+            "name": "Nebula Shard",
+            "price": "₱499",
+            "icon": "nebula"
+        },
+        {
+            "id": 2,
+            "name": "Echo Prism",
+            "price": "₱699",
+            "icon": "echo"
+        },
+        {
+            "id": 3,
+            "name": "Lunar Spike",
+            "price": "₱899",
+            "icon": "lunar"
+        },
+        {
+            "id": 4,
+            "name": "Solar Bloom",
+            "price": "₱599",
+            "icon": "solar"
+        },
+        {
+            "id": 5,
+            "name": "Void Fragment",
+            "price": "₱999",
+            "icon": "void"
+        },
+        {
+            "id": 6,
+            "name": "Aurora Core",
+            "price": "₱799",
+            "icon": "aurora"
+        }
     ]
 }
