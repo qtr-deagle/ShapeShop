@@ -39,40 +39,58 @@
     ],
     "crystals": [
         {
-            "id": 1,
+            "id": "1",
             "name": "Nebula Shard",
-            "price": "₱499",
-            "icon": "nebula"
+            "price": "$2.99",
+            "receive": "1000 crystal pack",
+            "icon": "nebula",
+            "tier": "basic",
+            "popular": "false"
         },
         {
-            "id": 2,
+            "id": "2",
             "name": "Echo Prism",
-            "price": "₱699",
-            "icon": "echo"
+            "price": "$6.99",
+            "receive": "3000 crystal pack",
+            "icon": "echo",
+            "tier": "basic",
+            "popular": "false"
         },
         {
-            "id": 3,
-            "name": "Lunar Spike",
-            "price": "₱899",
-            "icon": "lunar"
-        },
-        {
-            "id": 4,
+            "id": "3",
             "name": "Solar Bloom",
-            "price": "₱599",
-            "icon": "solar"
+            "price": "$8.99",
+            "receive": "4500 crystal pack",
+            "icon": "solar",
+            "tier": "premium",
+            "popular": "false"
         },
         {
-            "id": 5,
+            "id": "4",
+            "name": "Lunar Spike",
+            "price": "$9.99",
+            "receive": "6500 crystal pack",
+            "icon": "lunar",
+            "tier": "legendary",
+            "popular": "true"
+        },
+        {
+            "id": "5",
             "name": "Void Fragment",
-            "price": "₱999",
-            "icon": "void"
+            "price": "$12.99",
+            "receive": "9500 crystal pack",
+            "icon": "void",
+            "tier": "cosmic",
+            "popular": "false"
         },
         {
-            "id": 6,
+            "id": "6",
             "name": "Aurora Core",
-            "price": "₱799",
-            "icon": "aurora"
+            "price": "$15.99",
+            "receive": "12500 crystal pack",
+            "icon": "aurora",
+            "tier": "cosmic",
+            "popular": "false"
         }
     ]
 }

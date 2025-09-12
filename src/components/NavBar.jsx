@@ -1,28 +1,11 @@
 import { useState } from 'react';
+import BuyCrystalsModal from './BuyCrystalsModal';
 import { GiCrystalGrowth } from "react-icons/gi";
-import { RxCross2 } from "react-icons/rx";
+// import { RxCross2 } from "react-icons/rx";
 
-function NavBar() {
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleClick = () => {
-    setShowPopup(true);
-  };
-
-  const closePopup = () => {
-    setShowPopup(false);
-  };
-
-  const boxStyles = [
-    "bg-gradient-to-br from-purple-200 to-purple-400 border-purple-500",
-    "bg-gradient-to-tr from-indigo-100 to-purple-300 border-indigo-400",
-    "bg-gradient-to-bl from-pink-100 to-purple-200 border-pink-400",
-    "bg-gradient-to-r from-violet-100 to-purple-300 border-violet-400",
-    "bg-gradient-to-tl from-fuchsia-100 to-purple-300 border-fuchsia-400",
-    "bg-gradient-to-b from-purple-100 to-purple-500 border-purple-600",
-  ];
-
-
+export default function NavBar() {
+  const [showModal, setShowModal] = useState(false);
+  
   return (
     <nav className="bg-gradient-to-r from-[#27232b] via-[#372a44] to-[#6441a5] text-white px-4 py-2 flex flex-wrap items-center justify-between border-b-4 border-purple-500 shadow-[0_0_20px_rgba(128,0,255,0.6)]">
       <div className="flex items-center space-x-4">
@@ -44,40 +27,14 @@ function NavBar() {
           </span>
         </div>
 
-        <button onClick={handleClick} className="card-button text-xs tracking-wide inline-flex items-center gap-2 h-9 px-4 bg-purple-600 hover:bg-purple-800 font-bold font-mono">
+        <button onClick={() => setShowModal(true)} className="card-button text-xs tracking-wide inline-flex items-center gap-2 h-9 px-4 bg-purple-600 hover:bg-purple-800 font-bold font-mono">
           <GiCrystalGrowth className="text-sm" />
           BUY CRYSTALS
         </button>
-        {showPopup && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-            <div className="bg-white text-black p-8 rounded-xl shadow-2xl w-[900px] max-w-full h-[600px] relative">
-              <button onClick={closePopup} className="absolute top-4 right-4 text-2xl font-bold text-purple-600 hover:text-purple-800">
-                <RxCross2 />
-              </button>
 
-              <h2 className="text-4xl font-extrabold font-mono text-center">SELECT</h2>
-              <p className="mb-3 text-sm text-gray-700 text-center">choose your crystal and bend the cosmos to your will.</p>
+        {showModal && <BuyCrystalsModal onClose={() => setShowModal(false)} />}
 
-              <div className="grid grid-cols-3 gap-4">
-                {[...Array(6)].map((_, i) => (
-                  <div
-                    key={i}
-                    className={`rounded-xl p-16 flex flex-col items-center justify-center hover:scale-105 transition transform duration-300 border ${boxStyles[i]}`}
-                  >
-                    <GiCrystalGrowth className="text-purple-600 text-3xl mb-2" />
-                    <span className="font-bold text-sm font-mono">Crystal #{i + 1}</span>
-                    <button className="mt-2 text-xs bg-purple-600 hover:bg-purple-800 text-white px-3 py-1 rounded font-mono">
-                      Buy
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );
 };
-
-export default NavBar;

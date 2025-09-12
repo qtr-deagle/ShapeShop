@@ -19,6 +19,9 @@ body {
   align-items: center;
   text-align: center;
 }
+.card.short {
+  height: 220px;
+}
 .card:hover {
   transform: translate(-4px, -4px);
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);

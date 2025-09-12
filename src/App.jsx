@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
-import ShapeListings from './components/shapeListings';
+import ShapeListings from './components/ShapeListings';
 
 const App = () => {
   return (
