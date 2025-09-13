@@ -14,9 +14,8 @@ const boxStyles = [
 export default function BuyCrystalsModal({ onClose }) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white text-black p-8 rounded-xl shadow-2xl w-[900px] max-w-full h-[600px] relative">
-
-        <button onClick={onClose} className="absolute top-4 right-4 text-4xl font-bold text-black hover:text-gray-600">
+      <div className="duration-200 shadow-[0_0_150px_rgba(255,255,255,0.5)] translate-x-[-4px] translate-y-[-4px] bg-[#D4BEE4] border-4 border-[#3B1E54] text-black p-4 sm:p-8 rounded-xl w-[90%] sm:w-[900px] h-[90%] sm:h-[600px] max-w-full relative">
+        <button onClick={onClose} className="absolute z-10 top-6 right-8 text-4xl font-bold text-black hover:text-gray-600">
           <RxCross2 />
         </button>
         <SelectWindow />

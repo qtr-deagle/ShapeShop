@@ -11,10 +11,10 @@ export default function NavBar() {
       <div className="flex items-center space-x-4">
         <a href='/' className="text-4xl animate-pulse ml-4">🔮</a>
         <div>
-          <a href='/' className="hidden md:block shadow-text text-2xl font-bold ml-3 hover:text-purple-300 transition-colors duration-300 font-mono text-white shadow-text">
+          <a href='/' className="hidden sm:block shadow-text text-2xl font-bold ml-3 hover:text-purple-300 transition-colors duration-300 font-mono text-white shadow-text">
             SHAPESHOP
           </a>
-          <p className="ml-3 text-xs font-mono text-purple-200 hidden md:block ">
+          <p className="ml-3 text-xs font-mono text-purple-200 hidden sm:block ">
             Cosmic Geometry Emporium
           </p>
         </div>

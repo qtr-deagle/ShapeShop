@@ -9,7 +9,6 @@ body {
   height: 280px;             /* Adjust height for content */
   padding: 1rem;             /* Adds inner spacing */
   transition: all 0.2s;
-  border: 4px solid #a855f7;
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
   background-color: #1a002e; /* Optional: dark theme match */
   border-radius: 0.5rem;     /* Optional: rounded corners */

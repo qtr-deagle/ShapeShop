@@ -26,7 +26,8 @@ const shapeIcons = {
 
 const ShapeListing = ({ shape }) => {
     return (
-        <div className="card text-xs tracking-wide inline-flex items-center gap-2 rounded-md h-9 px-6 bg-purple-600 hover:bg-purple-900 font-bold font-mono">
+        <div className="card text-xs tracking-wide inline-flex items-center gap-2 rounded-md h-9 px-6 
+  border-4 border-[#a855f7] bg-purple-600 hover:bg-purple-900 font-bold font-mono">
             <div className="relative w-full h-[120px] bg-gradient-to-b from-[#3f1a5e] via-[#a855f7]/60 to-[#3f1a5e] border-purple-300 border-2 text-white flex justify-center mb-32 items-center">
                 {shapeIcons[shape.name]}
                 <div className={`absolute rounded-lg px-1 h-5 top-2 right-2 border-2 font-mono ${rarityColors[shape.rarity]}`}>

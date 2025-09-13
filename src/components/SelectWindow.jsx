@@ -24,34 +24,27 @@ export default function SelectWindow() {
     }, []);
 
     const tierStyles = {
-        "basic": 'from-gray-800 to-gray-700',
-        "premium": 'from-blue-600 to-cyan-500',
-        "legendary": 'from-purple-900 to-purple-600',
-        "cosmic": 'from-pink-200 to-orange-100',
+        "basic": 'from-gray-800 to-gray-700 border-gray-600 shadow-md hover:shadow-gray-500/50',
+        "premium": 'from-blue-600 to-cyan-500 border-blue-400 shadow-md hover:shadow-cyan-400/50',
+        "legendary": 'from-purple-900 to-purple-600 border-purple-500 shadow-lg hover:shadow-purple-500/50',
+        "cosmic": 'from-pink-200 to-orange-100 border-yellow-400 shadow-lg hover:shadow-pink-400/50'
     };
-    
-    return (
-        <>
-            <h1 className="text-3xl font-bold text-center mb-1">SELECT</h1>
-            <p className="text-center text-sm text-gray-400 mb-4">
-                choose your crystal and bend the cosmos to your will.
-            </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
+    return (
+        <div className="relative">
+            <h1 className="text-4xl tracking-wide font-bold text-center">SELECT YOUR CRYSTAL</h1>
+            <p className="text-center text-sm text-gray-800 mb-4">Select a crystal. Begin your journey.</p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 justify-items-center">
                 {crystals.map((crystal) => (
-                    <div
-                        key={crystal.id}
-                        className={`relative w-[220px] h-[260px] rounded-xl p-6 flex flex-col justify-between items-center
-              bg-gradient-to-br ${tierStyles[crystal.tier]}
-              shadow-lg hover:shadow-purple-500/50 transition-transform duration-300 hover:scale-105 card borderless short`}
-                    >
+                    <div key={crystal.id} className={`border-4 relative w-[220px] h-[260px] rounded-xl p-6 flex flex-col justify-between items-center bg-gradient-to-br ${tierStyles[crystal.tier]} shadow-lg hover:shadow-purple-500/50 transition-transform duration-300 hover:scale-105 card borderless short`}>
+
                         {/* Popular badge */}
                         {crystal.tier === 'legendary' && (
                             <span className="absolute top-2 right-2 bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded-full shadow animate-pulse">
                                 POPULAR
                             </span>
                         )}
-
 
                         {/* Crystal icon placeholder */}
                         <div className="text-4xl mb-2 text-purple-300">
@@ -72,6 +65,6 @@ export default function SelectWindow() {
                 ))}
             </div>
             {loading && <p className="text-black mt-4">Loading crystals...</p>}
-        </>
+        </div>
     );
 }
