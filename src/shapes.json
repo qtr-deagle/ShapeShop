@@ -40,57 +40,57 @@
     "crystals": [
         {
             "id": "1",
-            "name": "Nebula Shard",
+            "name": "BASIC PACK",
             "price": "$2.99",
-            "receive": "1000 crystal pack",
-            "icon": "nebula",
-            "tier": "basic",
-            "popular": "false"
+            "receive": "1000",
+            "bonus": "0",
+            "totalReceive": "1000",
+            "tier": "basic"
         },
         {
             "id": "2",
-            "name": "Echo Prism",
+            "name": "BASIC PACK",
             "price": "$6.99",
-            "receive": "3000 crystal pack",
-            "icon": "echo",
-            "tier": "basic",
-            "popular": "false"
+            "receive": "3000",
+            "bonus": "250",
+            "totalReceive": "3250",
+            "tier": "basic"
         },
         {
             "id": "3",
-            "name": "Solar Bloom",
+            "name": "RARE PACK",
             "price": "$8.99",
-            "receive": "4500 crystal pack",
-            "icon": "solar",
-            "tier": "premium",
-            "popular": "false"
+            "receive": "4500",
+            "bonus": "400",
+            "totalReceive": "4900",
+            "tier": "rare"
         },
         {
             "id": "4",
-            "name": "Lunar Spike",
+            "name": "EPIC PACK",
             "price": "$9.99",
-            "receive": "6500 crystal pack",
-            "icon": "lunar",
-            "tier": "legendary",
-            "popular": "true"
+            "receive": "6500",
+            "bonus": "600",
+            "totalReceive": "7100",
+            "tier": "epic"
         },
         {
             "id": "5",
-            "name": "Void Fragment",
+            "name": "COSMIC PACK",
             "price": "$12.99",
-            "receive": "9500 crystal pack",
-            "icon": "void",
-            "tier": "cosmic",
-            "popular": "false"
+            "receive": "9500",
+            "bonus": "1000",
+            "totalReceive": "10500",
+            "tier": "cosmic"
         },
         {
             "id": "6",
-            "name": "Aurora Core",
+            "name": "COSMIC PACK",
             "price": "$15.99",
-            "receive": "12500 crystal pack",
-            "icon": "aurora",
-            "tier": "cosmic",
-            "popular": "false"
+            "receive": "12500",
+            "bonus": "1500",
+            "totalReceive": "14000",
+            "tier": "cosmic"
         }
     ]
 }

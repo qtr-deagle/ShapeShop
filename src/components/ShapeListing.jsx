@@ -16,20 +16,22 @@ const rarityColors = {
 };
 
 const shapeIcons = {
-    "Plasma Cube": <FiBox className="text-7xl rotating" />,
-    "Neon Pyramid": <LuPyramid className="text-7xl rotating" />,
-    "Sphere of Light": <PiSphereBold className="text-7xl rotating" />,
-    "Hexagonal Prism": <RxBoxModel className="text-7xl rotating" />,
-    "Dark Square": <TbHexagonalPrism className="text-7xl rotating" />,
-    "Stack Circle": <HiOutlineCircleStack className="text-7xl rotating" />
+    "Plasma Cube": <FiBox />,
+    "Neon Pyramid": <LuPyramid />,
+    "Sphere of Light": <PiSphereBold />,
+    "Hexagonal Prism": <RxBoxModel />,
+    "Dark Square": <TbHexagonalPrism />,
+    "Stack Circle": <HiOutlineCircleStack />
 };
 
 const ShapeListing = ({ shape }) => {
     return (
         <div className="card text-xs tracking-wide inline-flex items-center gap-2 rounded-md h-9 px-6 
   border-4 border-[#a855f7] bg-purple-600 hover:bg-purple-900 font-bold font-mono">
-            <div className="relative w-full h-[120px] bg-gradient-to-b from-[#3f1a5e] via-[#a855f7]/60 to-[#3f1a5e] border-purple-300 border-2 text-white flex justify-center mb-32 items-center">
-                {shapeIcons[shape.name]}
+            <div className="relative w-full h-[120px] bg-gradient-to-b from-[#3f1a5e] via-[#a855f7]/60 to-[#3f1a5e] border-purple-300 border-2 text-white flex justify-center mb-32 items-center ">
+                <span className="text-7xl rotating">
+                    {shapeIcons[shape.name]}
+                </span>
                 <div className={`absolute rounded-lg px-1 h-5 top-2 right-2 border-2 font-mono ${rarityColors[shape.rarity]}`}>
                     <span className="text-xs px-1">{shape.rarity}</span>
                 </div>
