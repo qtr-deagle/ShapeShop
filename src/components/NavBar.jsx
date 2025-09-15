@@ -7,7 +7,7 @@ export default function NavBar() {
   const [showModal, setShowModal] = useState(false);
   
   return (
-    <nav className="bg-gradient-to-r from-[#27232b] via-[#372a44] to-[#6441a5] text-white px-4 py-2 flex flex-wrap items-center justify-between border-b-4 border-purple-500 shadow-[0_0_20px_rgba(128,0,255,0.6)]">
+    <nav className="fixed z-20 w-full bg-gradient-to-r from-[#27232b] via-[#372a44] to-[#6441a5] text-white px-4 py-2 flex flex-wrap items-center justify-between border-b-4 border-purple-500 shadow-[0_0_20px_rgba(128,0,255,0.6)]">
       <div className="flex items-center space-x-4">
         <a href='/' className="text-4xl animate-pulse ml-4">🔮</a>
         <div>

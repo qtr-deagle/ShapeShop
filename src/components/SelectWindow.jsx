@@ -38,7 +38,7 @@ export default function SelectWindow() {
     };
 
     return (
-        <button className="relative">
+        <button className="animate-modalOpen-button duration-500 relative">
             <h1 className="relative ml-8 bottom-3 text-4xl font-mono tracking-tight font-extrabold text-center">SELECT YOUR CRYSTAL</h1>
             <p className="relative ml-8 bottom-3 text-center text-sm text-gray-900 font-mono">Select a crystal. Begin your journey.</p>
 
@@ -68,7 +68,7 @@ export default function SelectWindow() {
                             {crystal.totalReceive}
                         </p>
                         <div className='bg-white h-12 w-full flex flex-col justify-center opacity-40 items-center absolute bottom-0 rounded-b'>
-                            <p className="text-black text-xs font-semibold absolute top-2">{crystal.receive} CRYSTALS</p>
+                            <p className="text-black text-xs font-bold absolute top-2">{crystal.receive} CRYSTALS</p>
                             <p className='text-green-500 text-xs font-semibold mt-4'>+ {crystal.bonus} bonus CRYSTALS</p>
                         </div>
 

@@ -13,6 +13,9 @@ export default {
         '24': '6rem',
         '25': '6.25rem',
       },
+      boxShadow: {
+        'offset-black': '4px 4px 0px rgba(0, 0, 0, 1)'
+      }
     },
   },
   plugins: [],
