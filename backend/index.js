@@ -1,23 +1,26 @@
 const express = require("express");
-const app = express();
-const port = 3333;
-
 const cors = require("cors");
-const bodyParser = require("body-parser");
-const { sqlconnect } = require("./models/db");
+const app = express();
+const port = 5000;
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// ✅ Allow requests from your frontend
+app.use(cors({
+  origin: "http://localhost:5173", // your React dev server
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
-app.use(cors());
+app.use(express.json());
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-});
+// Routes
+const shapesRoutes = require("./routes/shapes");
+const crystalsRoutes = require("./routes/crystals");
+
+app.use("/shapes", shapesRoutes);
+app.use("/crystals", crystalsRoutes);
+
+app.get("/", (req, res) => res.send("Backend is alive!"));
 
 app.listen(port, () => {
-    console.log("Attempting to connect to the database...");
-    sqlconnect()
-        .then(() => console.log("Connected to the database"))
-        .catch((err) => console.error("Database connection failed:", err));
+  console.log(`Server running on http://localhost:${port}`);
 });
