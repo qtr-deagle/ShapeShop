@@ -10,7 +10,7 @@ export default function SelectWindow() {
     useEffect(() => {
         const fetchCrystals = async () => {
             try {
-                const res = await fetch('http://localhost:5000/crystals');
+                const res = await fetch('http://localhost:5000/Crystals');
                 const data = await res.json();
                 setCrystals(data);
             } catch (err) {
@@ -44,7 +44,7 @@ export default function SelectWindow() {
 
             <div className="ml-7 grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 justify-items-center">
                 {crystals.map((crystal) => (
-                    <div key={crystal.id} className={`border-4 relative w-[220px] h-[260px] rounded-xl p-6 flex flex-col justify-between items-center bg-gradient-to-br ${tierStyles[crystal.tier]} shadow-lg hover:shadow-purple-500/50 transition-transform duration-300 hover:scale-105 card borderless short`}>
+                    <div key={crystal.id} className={`border-4 relative w-[220px] h-[260px] rounded-xl p-6 flex flex-col justify-between items-center bg-gradient-to-br ${tierStyles[crystal.Tier]} shadow-lg hover:shadow-purple-500/50 transition-transform duration-300 hover:scale-105 card borderless short`}>
 
                         {/* Popular badge */}
                         {crystal.tier === 'epic' && (
@@ -55,21 +55,21 @@ export default function SelectWindow() {
 
                         {/* Crystal icon */}
                         <div className="relative text-4xl bottom-6">
-                            {crystalIcons[crystal.tier]}
+                            {crystalIcons[crystal.Tier]}
                         </div>
 
                         {/* Name and price */}
                         <div className="relative text-center bottom-3">
-                            <p className="relative bottom-24 left-21 max-w-[60px] text-sm text-white font-bold">{crystal.price}</p>
+                            <p className="relative bottom-24 left-21 max-w-[60px] text-sm text-white font-bold">{crystal.Price}</p>
                         </div>
 
                         {/* Receive info */}
                         <p className="text-xl text-green-200 font-bold tracking-wide text-center absolute bottom-22">
-                            {crystal.totalReceive}
+                            {crystal.TotalReceive}
                         </p>
                         <div className='bg-white h-12 w-full flex flex-col justify-center opacity-40 items-center absolute bottom-0 rounded-b'>
-                            <p className="text-black text-xs font-bold absolute top-2">{crystal.receive} CRYSTALS</p>
-                            <p className='text-green-500 text-xs font-semibold mt-4'>+ {crystal.bonus} bonus CRYSTALS</p>
+                            <p className="text-black text-xs font-bold absolute top-2">{crystal.Receive} CRYSTALS</p>
+                            <p className='text-green-500 text-xs font-semibold mt-4'>+ {crystal.Bonus} bonus CRYSTALS</p>
                         </div>
 
                     </div>

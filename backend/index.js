@@ -3,7 +3,7 @@ const cors = require("cors");
 const app = express();
 const port = 5000;
 
-// ✅ Allow requests from your frontend
+// Allow requests from your frontend
 app.use(cors({
   origin: "http://localhost:5173", // your React dev server
   methods: ["GET", "POST", "PUT", "DELETE"],

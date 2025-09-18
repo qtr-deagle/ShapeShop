@@ -30,20 +30,20 @@ const ShapeListing = ({ shape }) => {
   border-4 border-[#a855f7] bg-purple-600 hover:bg-purple-900 font-bold font-mono">
             <div className="relative w-full h-[120px] bg-gradient-to-b from-[#3f1a5e] via-[#a855f7]/60 to-[#3f1a5e] border-purple-300 border-2 text-white flex justify-center mb-32 items-center ">
                 <span className="text-7xl rotating">
-                    {shapeIcons[shape.name]}
+                    {shapeIcons[shape.Name]}
                 </span>
-                <div className={`absolute rounded-lg px-1 h-5 top-2 right-2 border-2 font-mono ${rarityColors[shape.rarity]}`}>
-                    <span className="text-xs px-1">{shape.rarity}</span>
+                <div className={`absolute rounded-lg px-1 h-5 top-2 right-2 border-2 font-mono ${rarityColors[shape.Rarity]}`}>
+                    <span className="text-xs px-1">{shape.Rarity}</span>
                 </div>
             </div>
 
             <h3 className="absolute text-xl font-bold text-purple-200 mb-2 text-center font-mono mt-9 max-w-48 max-h-8">
-                {shape.name}
+                {shape.Name}
             </h3>
 
             <div className="absolute inline-flex gap-1 text-sm text-purple-300 mt-20 text-center font-mono max-w-48 max-h-8">
                 <GiCrystalGrowth className="text-sm mt-0.5" />
-                {shape.price}
+                {shape.Price}
             </div>
 
             <button className="absolute card-button text-white tracking-widest w-48 mb-4 bg-purple-600 hover:bg-purple-800 p-2 rounded-md border-2 border-black mx-auto my-56">

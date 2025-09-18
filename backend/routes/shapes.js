@@ -5,7 +5,7 @@ const knex = require("knex")(require("../../knexfile").development);
 router.get("/", async (req, res) => {
   try {
     const shapes = await knex("Shapes")
-      .select("ShapeID as id", "Name", "Price", "Rarity");
+      .select("id", "Name", "Price", "Rarity");
     res.json(shapes);
   } catch (err) {
     res.status(500).json({ error: err.message });

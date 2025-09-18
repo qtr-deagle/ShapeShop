@@ -10,7 +10,7 @@ const ShapeListings = () => {
   useEffect(() => {
     const fetchShapes = async () => {
       try {
-        const res = await fetch('http://localhost:5000/shapes');
+        const res = await fetch('http://localhost:5000/Shapes');
         const data = await res.json();
         setShapes(data);
       } catch (err) {
