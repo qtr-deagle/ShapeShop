@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import ShapeListing from './shapeListing'
-import React from 'react'
+import ShapeListing from './ShapeListing'
+import Spinner from './Spinner';
 
 const ShapeListings = () => {
   const [shapes, setShapes] = useState([]);
@@ -25,13 +25,16 @@ const ShapeListings = () => {
 
   return (
     <section className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-[#1a002e] via-[#300036] to-[#1a002e] p-4">
-      {loading && <p className="text-white">Loading shapes...</p>}
-      {error && <p className="text-red-500">Error: {error}</p>}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {shapes.map((shape) => (
-          <ShapeListing key={shape.id} shape={shape} />
-        ))}
-      </div>
+      {loading ? (
+        <Spinner loading={loading} />
+      ) : (
+        // { error && <p className="text-red-500">Error: {error}</p>}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {shapes.map((shape) => (
+            <ShapeListing key={shape.id} shape={shape} />
+          ))}
+        </div>
+      )}
     </section>
   )
 }
